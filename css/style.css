@@ -1,0 +1,265 @@
+
+html, body {
+	height:100%;
+	background-color: #231F20;
+	font-family: 'Teko', sans-serif;
+	color: #FFFFFF;
+}
+
+/* Menu */
+
+.scroll {
+	white-space: nowrap;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.scroll::-webkit-scrollbar {
+	display: none;
+}
+
+#menu {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	padding: 1.5em 0;
+	background-color: #231F20;
+	text-align: right;
+	z-index:10;
+}
+
+#menu ul li {
+	display: inline-block;
+	margin-right: 4em;
+	text-align: center;
+	font-weight: 500;
+}
+
+#menu ul:first-of-type {
+	margin-left: 4em;
+}
+
+#menu ul li:hover {
+	opacity: 0.77;
+}
+
+#menu ul li a {
+	display: inline-block;
+	text-decoration: none;
+	font-size: 2.5em;
+	color: #FFFFFF;
+}
+
+#menu ul li hr {
+	width:75%;
+	height: 0.25em;
+	margin: -0.5em auto;
+	border: 0;
+	background-color: #FFFFFF;
+}
+
+/* Container */
+
+#container {
+	max-width: 75em;
+	height: calc(100% - 6em);
+	margin: 6em auto;
+}
+
+/* Profile */
+
+#profile {
+	width: 50%;
+	height: 100%;
+	float: left;
+	text-align: center;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+#profile_content {
+	position: fixed;
+}
+
+#profile_content #logo {
+	width: 10em;
+}
+
+#profile_content #name {
+	font-size: 2.8em;
+	margin-top: 0.3em;
+}
+
+#profile_content p {
+	text-align: center;
+	font-size: 1.8em;
+}
+
+/* Main */
+
+#main {
+	width: 50%;
+	float:right;
+	margin-bottom: 3em;
+}
+
+#main .title {
+	display: inline-block;
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+
+#main .title h3 {
+	font-size: 2.5em;
+}
+
+#main .title hr {
+	border: 0;
+	height: 0.25em;
+	background-color: #FFFFFF;
+	width:75%;
+	margin: -0.5em auto;
+}
+
+#main .content {
+	margin-top: 1em;
+}
+
+#main .content p {
+	font-size: 1.8em;
+}
+
+#main .content dt {
+	margin-top: 0.5em;
+	font-size: 1.8em;
+}
+
+#main .content dd {
+	font-weight: 400;
+	font-size: 1.3em;
+}
+
+#main .content ul {
+	margin-top: 1em;
+}
+
+#main .content ul li p {
+	font-size: 1.8em;
+	display: inline-block;
+	margin-right: 0.5em;
+}
+
+.anchor {
+	display: block;
+	height: 7.5em;
+	margin-top: -7.5em;
+	visibility: hidden;
+}
+
+.light {
+	font-weight: 300;
+	color: #B1BABA;
+}
+
+/* Icons */
+
+.circle-checked:before {
+	vertical-align: middle;
+	display: inline-block;
+	content: "";
+	background-image: url('../images/circle-checked.svg');
+	background-repeat: no-repeat;
+	background-size: 0.6em 0.6em;
+	height: 0.6em;
+	width: 0.6em;
+	margin-bottom: 0.1em;
+	margin-right: 0.1em;
+}
+
+.circle-unchecked:before {
+	vertical-align: middle;
+	display: inline-block;
+	content: "";
+	background-image: url('../images/circle-unchecked.svg');
+	background-repeat: no-repeat;
+	background-size: 0.6em 0.6em;
+	height: 0.6em;
+	width: 0.6em;
+	margin-bottom: 0.1em;
+	margin-right: 0.1em;
+}
+
+.github:before {
+	vertical-align: middle;
+	display: inline-block;
+	content: "";
+	background-image: url('../images/github.svg');
+	background-repeat: no-repeat;
+	background-size: 0.8em 0.8em;
+	height: 0.8em;
+	width: 0.8em;
+	margin-bottom: 0.1em;
+	margin-left: 0.1em;
+}
+
+.github:hover {
+	filter: brightness(1.5);
+}
+
+.instagram:before {
+	vertical-align: middle;
+	display: inline-block;
+	content: "";
+	background-image: url('../images/instagram.svg');
+	background-repeat: no-repeat;
+	background-size: 0.8em 0.8em;
+	height: 0.8em;
+	width: 0.8em;
+	margin-bottom: 0.1em;
+	margin-left: 0.1em;
+}
+
+.instagram:hover {
+	filter: brightness(1.5);
+}
+
+.fb:before {
+	vertical-align: middle;
+	display: inline-block;
+	content: "";
+	background-image: url('../images/fb.svg');
+	background-repeat: no-repeat;
+	background-size: 0.8em 0.8em;
+	height: 0.8em;
+	width: 0.8em;
+	margin-bottom: 0.1em;
+	margin-left: 0.1em;
+}
+
+.fb:hover {
+	filter: brightness(1.5);
+}
+
+.medium:before {
+	vertical-align: middle;
+	display: inline-block;
+	content: "";
+	background-image: url('../images/medium.svg');
+	background-repeat: no-repeat;
+	background-size: 0.8em 0.8em;
+	height: 0.8em;
+	width: 0.8em;
+	margin-bottom: 0.1em;
+	margin-left: 0.1em;
+}
+
+.medium:hover {
+	filter: brightness(1.5);
+}
