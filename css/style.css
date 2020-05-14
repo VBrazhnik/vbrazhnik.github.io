@@ -164,8 +164,10 @@ html, body {
 	font-size: 1.3em;
 }
 
-#main .content ul {
-	margin-top: 1em;
+#main .content ul li:before {
+	content: '\2022';
+	margin-right: 0.4em;
+	font-size: 1.8em;
 }
 
 #main .content ul li p {
@@ -226,26 +228,6 @@ html, body {
 
 .google-play:before {
 	background-image: url('../images/google-play.svg');
-}
-
-.circle:before {
-	vertical-align: middle;
-	display: inline-block;
-	content: "";
-	background-repeat: no-repeat;
-	background-size: 0.6em 0.6em;
-	height: 0.6em;
-	width: 0.6em;
-	margin-bottom: 0.1em;
-	margin-right: 0.1em;
-}
-
-.circle-checked:before {
-	background-image: url('../images/circle-checked.svg');
-}
-
-.circle-unchecked:before {
-	background-image: url('../images/circle-unchecked.svg');
 }
 
 /* Mobile */
@@ -341,6 +323,10 @@ html, body {
 
 	#main .content dd {
 		font-size: 3em;
+	}
+
+	#main .content ul li::before {
+		font-size: 4em;
 	}
 
 	#main .content ul li p {
