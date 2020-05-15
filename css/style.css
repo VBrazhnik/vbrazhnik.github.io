@@ -188,6 +188,12 @@ html, body {
 	color: #B1BABA;
 }
 
+/* Footer */
+
+#footer {
+	height: 3em;
+}
+
 /* Icons */
 
 .social:before {
@@ -336,5 +342,11 @@ html, body {
 	.anchor {
 		height: 15em;
 		margin-top: -15em;
+	}
+
+	/* Footer */
+
+	#footer {
+		height: 5em;
 	}
 }
