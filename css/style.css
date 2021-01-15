@@ -31,6 +31,7 @@ body {
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
 	-ms-overflow-style: -ms-autohiding-scrollbar;
+	scrollbar-width: none; /* For Firefox */
 }
 
 .scroll::-webkit-scrollbar {
