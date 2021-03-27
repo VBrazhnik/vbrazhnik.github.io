@@ -305,7 +305,8 @@ body {
 	/* Main */
 
 	#main {
-		width: 100%;
+		width: -moz-fit-content;
+		width: fit-content;
 		float: left;
 		margin: 3em 4em 5em 4em;
 	}
