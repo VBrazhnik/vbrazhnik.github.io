@@ -23,7 +23,7 @@
 		<link href="../../css/style.css" rel="stylesheet"/>
 
 		<!-- Title -->
-		<title>Privacy Policy | Obleek</title>
+		<title>Privacy Policy | obleek</title>
 
 		<style>
 			#policy {
@@ -47,6 +47,10 @@
 			#policy li {
 				font-size: 1.4em;
 				line-height: 1.5;
+			}
+
+			#policy p {
+				margin-bottom: 1em;
 			}
 
 			#policy ul {
@@ -85,10 +89,10 @@
 		<div id="policy">
 
 			<h1>Privacy Policy</h1>
-			<p class="light">Last updated: August 29, 2026</p>
+			<p class="light">Last updated: September 17, 2026</p>
 
 			<p>
-				This Privacy Policy applies to the Android application “Obleek”
+				This Privacy Policy applies to the Android application “obleek”
 				(package name: <span class="light">com.vbrazhnik.obleek</span>),
 				available on Google Play (“the App”), developed by Vladyslav Brazhnik (“the
 				Developer”). It explains how the App handles information when you use it.
@@ -96,10 +100,17 @@
 
 			<h2>Summary</h2>
 			<p>
-				Obleek is a personal budget and transaction tracker. All of your financial data
-				stays on your device — the App has no account system and no server of its own.
-				The App does not contain ads and does not include any third-party SDKs other than
-				an optional, off-by-default analytics library described below.
+				obleek is a personal budget and transaction tracker. Your financial data — accounts,
+				transactions, categories, plans, tags, and notes — stays in a local database on your
+				device. The App has no account system and no server of its own, so the Developer never
+				receives your financial data. The App contains no advertising and requests no
+				advertising identifier.
+			</p>
+			<p>
+				The App uses a small number of third-party services, each described in its own section
+				below: public exchange-rate providers, optional and opt-in usage analytics, on-device
+				text recognition used by the optional transaction-detection feature, and the payment
+				services behind the optional obleek Pro subscription.
 			</p>
 
 			<h2>Information the App Accesses</h2>
@@ -120,6 +131,69 @@
 				it never sends any of your data to them.
 			</p>
 
+			<h2>Transaction Detection from Notifications</h2>
+			<p>
+				The App offers an optional feature that recognizes payments from the notifications
+				posted by your banking and payment apps, so you can confirm a transaction instead of
+				typing it in. This feature is off by default. It works only after you explicitly
+				grant the App Android’s “Notification access” permission in your system settings
+				<em>and</em> pick which apps it may watch. You can turn it off, or revoke the
+				permission, at any time.
+			</p>
+			<p>
+				While the feature is on, the App reads the title and body text of notifications posted
+				by the apps you selected, and ignores every other notification on your device. Reading
+				and interpreting that text happens entirely on your device. The recognized text is
+				never sent to the Developer, and it is never sent to any third party.
+			</p>
+			<p>
+				From a matching notification, the App keeps only the fields it needs to propose a
+				transaction: the amount, the currency, whether money went out or came in, the merchant
+				name, the last four digits of the card if the notification shows them, the time the
+				notification was posted, and the package name of the app it came from. The raw
+				notification text itself is deliberately not stored. These pending items live in the
+				same local database as the rest of your data and are removed once you confirm or
+				dismiss them; they are excluded from the App’s manual JSON export.
+			</p>
+			<p>
+				The App recognizes most notifications using a list of known bank notification formats
+				that is bundled inside the App itself — no network request is made to match them. When
+				those patterns do not recognize a notification, the App falls back to Google’s ML Kit
+				Entity Extraction to locate an amount in the text. ML Kit runs its model locally on
+				your device; Google Play services may download that model to your device once, but the
+				notification text is analyzed on the device and is not uploaded.
+			</p>
+			<p>
+				When a payment is recognized, the App posts a local notification on your device so you
+				can review it. That notification never leaves your device.
+			</p>
+
+			<h2>obleek Pro Subscription</h2>
+			<p>
+				The App offers an optional paid subscription, obleek Pro. If you choose to subscribe,
+				the purchase itself is processed by Google Play Billing. The Developer never sees or
+				receives your payment-card details; Google handles the payment under
+				<a href="https://policies.google.com/privacy">Google’s Privacy Policy</a>.
+			</p>
+			<p>
+				To determine whether your subscription is active — including across a reinstall or a
+				new device, via “Restore purchases” — the App uses RevenueCat, a third-party
+				subscription-management service. RevenueCat receives information about the purchase
+				itself (such as the product purchased, its status, and the Google Play purchase
+				receipt) together with an anonymous identifier it generates for the installation and
+				basic technical information such as the device model, operating-system version, App
+				version, and country. The App does not ask you for a name, email address, or any other
+				personal identifier, does not send one to RevenueCat, and does not enable RevenueCat’s
+				collection of device advertising identifiers. No transaction, account, or other
+				financial data from the App is ever sent to RevenueCat. RevenueCat’s handling of this
+				data is described in its
+				<a href="https://www.revenuecat.com/privacy/">privacy policy</a>.
+			</p>
+			<p>
+				You manage or cancel a subscription through your Google Play account, not through the
+				Developer.
+			</p>
+
 			<h2>Usage Analytics</h2>
 			<p>
 				The first time you open the App, you are asked whether to allow anonymous usage
@@ -128,13 +202,25 @@
 			</p>
 			<p>
 				If enabled, this is handled by Google’s Firebase Analytics and Firebase
-				Crashlytics. The App reports only anonymous, structured events, such as
-				which screen was opened or that a transaction of a given type was added. These
-				events never include amounts, account names, categories, tags, notes, or any other
-				content from your transactions. If you allow analytics, anonymous crash reports
-				(for example, a stack trace and basic device information) may also be sent to help
-				fix bugs. None of this is tied to your name, email, or any other personal
-				identifier, because the App has no accounts or sign-in of any kind.
+				Crashlytics. The App reports only anonymous, structured events describing which
+				screens and features were used — for example, that a screen was opened, that a
+				transaction of a given type was added, that transaction detection was switched on or
+				off, that a payment notification was recognized, or that the subscription screen was
+				shown, a plan was selected, or a purchase completed, was cancelled, or failed.
+			</p>
+			<p>
+				These events never include amounts, account names, categories, tags, notes, merchant
+				names, card digits, or any other content from your transactions or from the
+				notifications the App reads. The one identifier an event may carry about another app is
+				the package name of a notification source you chose to watch (for example, your bank’s
+				app), which is reported so the Developer can tell which banks need better recognition.
+			</p>
+			<p>
+				If you allow analytics, anonymous crash reports (for example, a stack trace and basic
+				device information) may also be sent to help fix bugs. None of this is tied to your
+				name, email, or any other personal identifier, because the App has no accounts or
+				sign-in of any kind, and the App explicitly removes the Android advertising-identifier
+				permission, so no advertising ID is collected.
 			</p>
 
 			<h2>Backup &amp; Export</h2>
@@ -165,9 +251,19 @@
 			<p>
 				The Developer does not share, sell, or transmit your financial data to third
 				parties, because that data never leaves your device in the first place. The only
-				outside services the App talks to are the public exchange-rate providers
-				described above and, only if you opt in, the analytics/crash-reporting service
-				described above.
+				outside services the App talks to are:
+			</p>
+			<ul>
+				<li>the public exchange-rate providers described above;</li>
+				<li>Google Play services, for the on-device text-recognition model used by
+					transaction detection, if you enable that feature;</li>
+				<li>Google Play Billing and RevenueCat, if you purchase or restore an obleek Pro
+					subscription;</li>
+				<li>Firebase Analytics and Crashlytics, only if you opt in to analytics.</li>
+			</ul>
+			<p>
+				None of these receive your transactions, balances, notes, or the contents of the
+				notifications the App reads.
 			</p>
 
 			<h2>Children’s Privacy</h2>
